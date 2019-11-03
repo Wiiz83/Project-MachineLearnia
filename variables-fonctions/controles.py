@@ -25,12 +25,13 @@ x = 6
 while x<10 :
     print(x)
     x += 1
-
+    
+# print la suite de fibonacci jusqu'à la valeur de n
 def fibonacci(n):
-    # print la suite de fibonacci jusqu'à la valeur de n
-    i = 0
-    while i<n:
-        print(i)
-        i += 1
+    a = 0
+    b = 1
+    while a < n:
+        print(a)
+        a, b = b, a+b
         
-fibonacci(100)
+fibonacci(1000)
