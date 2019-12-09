@@ -12,5 +12,7 @@ y = x**2 # carré de x
 # c = couleur de la ligne 
 # lw = épaisseur de la ligne
 # ls = style de la ligne 
-plt.plot(x, y, c='red', lw=3, ls='--') 
+plt.figure(figsize=(12, 8)) # création de la fenêtre de travail 
+plt.plot(x, y, c='red', lw=3, ls='--')  # création du graphique 
 plt.show()
+

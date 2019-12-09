@@ -74,3 +74,12 @@ liste1 = []
 with open('fichier.txt', 'r') as f :
     liste1 = f.read()
 print(liste1)
+
+import glob
+
+filenames = glob.glob('*.txt')
+dico = {}
+for file in filenames :
+    with open(file, 'r') as f:
+        dico[file] = f.read().splitlines()
+print(dico) # la clé est le nom du fichier, le contenu sont les lignes du fichier
