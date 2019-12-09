@@ -46,7 +46,34 @@ print(tab11)
 tab12 = np.concatenate((tab2, tab3), axis=1)
 print(tab12)
 
-# remaniement de la forme du tableau 
+# remaniement de la forme du tableau : changer les dimensions 
 tab12 = tab12.reshape((6, 4))
 print(tab12)
+
+tab13 = np.array([1,2,3])
+print(tab13.shape) # affiche (3,)
+tab13 = tab13.reshape((tab13.shape[0], 1))
+print(tab13.shape) # affiche (3,1) : meilleur pour la manipulation 
+tab13 = tab13.squeeze() # enleve les dimensions 1
+print(tab13.shape) # affiche (3,)
+
+# aplatir un tableau à une seule dimension 
+print(tab12)
+tab12 = tab12.ravel();
+print(tab12)
+
+# créer une matrice aléatoire de dimensions m x n
+def initialisation(m,n) :
+    # m : nombre de lignes
+    # n : nombre de colonnes
+    # retourne une matrice aléatoire (m, n+1)
+    # avec une colonne biaire remplie de 1 tout à droite
+    # conseils : utiliser random.randn, concatenate
+    tableauRandom = np.random.randn(m, n)
+    tabOnlyOnes = np.ones((m,1))
+    tabConcatenate = np.concatenate((tableauRandom, tabOnlyOnes), axis=1)
+    return tabConcatenate
+
+print(initialisation(2, 2))
+
 
