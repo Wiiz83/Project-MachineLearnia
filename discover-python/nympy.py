@@ -1,6 +1,9 @@
 import numpy as np
 # https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html
 
+# Introduction à Numpy 
+# https://www.youtube.com/watch?v=NzDQTrqsxas
+
 tableau = np.array([1,2,3])
 print(tableau)
 print(tableau.ndim) # affiche la dimension du tableau : 1 
@@ -75,5 +78,38 @@ def initialisation(m,n) :
     return tabConcatenate
 
 print(initialisation(2, 2))
+
+
+# Numpy : Indexing Slicing Masking
+# https://www.youtube.com/watch?v=vw4u9uBFFqU
+
+print("_________Numpy : Indexing Slicing Masking__________")
+
+# en général en data science, on travaille sur des tableaux à dimensions 
+# c'est à dire un axe 0 (les lignes) et un axe 1 (les colonnes)
+# conseil : toujours se déplacer sur un axe à la fois 
+
+tab14 = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(tab14)
+
+# Indexing 
+print(tab14[0,1]) # élément situé deuxième colonne, première ligne 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
